@@ -94,10 +94,11 @@ sudo apt-get update
 # ================================================
 # Step 5
 progress_bar "Installing many usefull packages."
-sudo apt install gcc g++ gconf2 gconf-service rsync xterm htop vim vim-scripts emacs initramfs-tools binutils kernel-package numlockx libxml2-dev geany cups cups-pdf pdfshuffler git apt-file ubuntu-restricted-extras gparted gnome-tweak-tool ffmpeg build-essential zlib1g-dev libbz2-dev liblzma-dev libncurses5-dev libreadline6-dev libsqlite3-dev libssl-dev libgdbm-dev liblzma-dev lzma lzma-dev libgdbm-dev libffi-dev uuid-dev libgdbm-dev libgdbm-compat-dev python2.7 python3-tk libnss3-dev libssl-dev libreadline-dev wget linux-headers-$(uname -r) tilix curl filezilla alacarte lsb-core gnome-shell-extensions snap snapd python3 python3-pip copyq guake firefox fish transmission nmap iptraf net-tools screen -y && sudo apt-get upgrade -y
+sudo apt-get install ttf-mscorefonts-installer-y
+sudo apt install gcc g++ gconf2 gconf-service rsync xterm htop vim vim-scripts emacs initramfs-tools binutils kernel-package numlockx fonts-firacode libxml2-dev geany cups cups-pdf pdfshuffler git apt-file ubuntu-restricted-extras gparted gnome-tweak-tool ffmpeg build-essential zlib1g-dev libbz2-dev liblzma-dev libncurses5-dev libreadline6-dev libsqlite3-dev libssl-dev libgdbm-dev liblzma-dev lzma lzma-dev libgdbm-dev libffi-dev uuid-dev libgdbm-dev libgdbm-compat-dev python2.7 python3-tk libnss3-dev libssl-dev libreadline-dev wget linux-headers-$(uname -r) tilix curl filezilla alacarte lsb-core gnome-shell-extensions snap snapd python3 python3-pip copyq guake firefox fish transmission nmap iptraf net-tools screen -y && sudo apt-get upgrade -y
 suc_fail_func "usefull pacakages"
 
-sudo apt-get install fonts-firacode -y
+sudo apt-get install fonts-firacode ttf-mscorefonts-installer-y
 
 # ================================================
 # Step 6
