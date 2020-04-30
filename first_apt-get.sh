@@ -100,11 +100,14 @@ suc_fail_func "many usefull pacakages"
 # ================================================
 # Step 6
 progress_bar "Setting up variable for this program."
+
 ### Global Variables
+gitrepo="https://raw.githubusercontent.com/jcesarprog/first-apt/master"
 user=$(who | awk '{print $1}')
 user_home="/home/$user"
 name=$(lsb_release -sc)
 u_18_name="bionic"
+
 
 echo $bold"\nThis distribution codename is $name\nUser: $user"$end
 sleep 2
@@ -301,7 +304,6 @@ suc_fail_func "Dropbox"
 # ================================================
 # Step 28
 progress_bar "Setting up vi theme.\nInstalling vimrc template."
-gitrepo="https://raw.githubusercontent.com/jcesarprog/first-apt/master"
 
 echo $bold"Installing vimrc template"$end
 sleep 2
