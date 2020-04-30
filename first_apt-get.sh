@@ -94,7 +94,7 @@ sudo apt-get update
 # ================================================
 # Step 5
 progress_bar "Installing many usefull packages."
-sudo apt-get install gcc g++ gconf2 gconf-service rsync xterm htop vim vim-scripts emacs initramfs-tools binutils numlockx kernel-package pdfshuffler ubuntu-restricted-extras fonts-firacode libxml2-dev geany cups cups-pdf git apt-file gparted gnome-tweak-tool ffmpeg build-essential zlib1g-dev libbz2-dev liblzma-dev libncurses5-dev libreadline6-dev libsqlite3-dev libssl-dev libgdbm-dev liblzma-dev lzma lzma-dev libgdbm-dev libffi-dev uuid-dev libgdbm-dev libgdbm-compat-dev python2.7 python3-tk libnss3-dev libssl-dev libreadline-dev wget linux-headers-$(uname -r) tilix curl filezilla alacarte lsb-core gnome-shell-extensions snap snapd python3 python3-pip copyq guake firefox fish transmission nmap iptraf net-tools screen -y && sudo apt-get upgrade -y
+sudo apt install gcc g++ gconf2 gconf-service rsync xterm htop vim vim-scripts emacs initramfs-tools binutils numlockx kernel-package pdfshuffler ubuntu-restricted-extras fonts-firacode libxml2-dev geany cups cups-pdf git apt-file gparted gnome-tweak-tool ffmpeg build-essential zlib1g-dev libbz2-dev liblzma-dev libncurses5-dev libreadline6-dev libsqlite3-dev libssl-dev libgdbm-dev liblzma-dev lzma lzma-dev libgdbm-dev libffi-dev uuid-dev libgdbm-dev libgdbm-compat-dev python2.7 python3-tk libnss3-dev libssl-dev libreadline-dev wget linux-headers-$(uname -r) tilix curl filezilla alacarte lsb-core gnome-shell-extensions snap snapd python3 python3-pip copyq guake firefox fish transmission nmap iptraf net-tools screen -y && sudo apt-get upgrade -y
 suc_fail_func "many usefull pacakages"
 
 # ================================================
@@ -167,10 +167,7 @@ sudo update-alternatives --config x-terminal-emulator
 # ================================================
 # Step 9
 progress_bar "Installing packages for audio, video, drawing, streaming, math and virtualbox."
-sudo apt-get install wireshark -y
-suc_fail_func "wireshark"
-
-sudo apt install vlc gimp pinta blender krita simplescreenrecorder obs-studio cheese audacity geogebra octave virtualbox -y
+sudo apt install vlc gimp pinta blender krita simplescreenrecorder obs-studio cheese audacity geogebra octave wireshark virtualbox -y
 suc_fail_func "packages for audio, video, drawing, streaming, math and virtualbox"
 
 # ================================================
