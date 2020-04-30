@@ -301,7 +301,7 @@ suc_fail_func "Dropbox"
 # ================================================
 # Step 28
 progress_bar "Setting up vi theme.\nInstalling vimrc template."
-gitrepo="https://raw.githubusercontent.com/jcesarprog/Ubuntu-Files/master/on_New_Ubuntu"
+gitrepo="https://raw.githubusercontent.com/jcesarprog/first-apt/master"
 
 echo $bold"Installing vimrc template"$end
 sleep 2
