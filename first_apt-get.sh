@@ -94,7 +94,7 @@ sudo apt-get update
 # ================================================
 # Step 5
 progress_bar "Installing many usefull packages."
-sudo apt install gcc g++ gconf2 gconf-service rsync xterm htop vim vim-scripts emacs initramfs-tools binutils kernel-package numlockx fonts-firacode libxml2-dev geany cups cups-pdf pdfshuffler git apt-file ubuntu-restricted-extras gparted gnome-tweak-tool ffmpeg build-essential zlib1g-dev libbz2-dev liblzma-dev libncurses5-dev libreadline6-dev libsqlite3-dev libssl-dev libgdbm-dev liblzma-dev tk8.*-dev lzma lzma-dev libgdbm-dev libffi-dev uuid-dev libgdbm-dev libgdbm-compat-dev python2.7 python3-tk libnss3-dev libssl-dev libreadline-dev wget linux-headers-$(uname -r) tilix curl filezilla alacarte lsb-core gnome-shell-extensions snap snapd python3 python3-pip copyq guake firefox fish transmission nmap iptraf net-tools screen -y && sudo apt-get upgrade -y
+sudo apt install gcc g++ gconf2 gconf-service rsync xterm htop vim vim-scripts emacs initramfs-tools binutils kernel-package numlockx fonts-firacode libxml2-dev geany cups cups-pdf pdfshuffler git apt-file ubuntu-restricted-extras gparted gnome-tweak-tool ffmpeg build-essential zlib1g-dev libbz2-dev liblzma-dev libncurses5-dev libreadline6-dev libsqlite3-dev libssl-dev libgdbm-dev liblzma-dev lzma lzma-dev libgdbm-dev libffi-dev uuid-dev libgdbm-dev libgdbm-compat-dev python2.7 python3-tk libnss3-dev libssl-dev libreadline-dev wget linux-headers-$(uname -r) tilix curl filezilla alacarte lsb-core gnome-shell-extensions snap snapd python3 python3-pip copyq guake firefox fish transmission nmap iptraf net-tools screen -y && sudo apt-get upgrade -y
 suc_fail_func "usefull pacakages"
 
 # ================================================
@@ -115,12 +115,16 @@ progress_bar "Installing other utility packages."
 
 if [ "$name" != "$u_18_name" ]; then
     echo $bold"\nInstalling python2 due to some dependencies\n"$end
-    sudo apt-get install libpython2-stdlib python-is-python2 python2 python2-minimal -y
+    sudo apt install libpython2-stdlib python-is-python2 python2 python2-minimal tk8.6-dev -y
     if [ $? -eq 0 ]; then
         echo $green"\nSuccess on installing python2\n"$end
     else
         echo $red"Failure on installing python2"$end | tee -a ~/errors.log
     fi
+
+else
+    sudo apt install tk8.5-dev
+
 fi
 
 # ================================================
