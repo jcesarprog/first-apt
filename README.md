@@ -2,7 +2,7 @@
 ### It installs many useful packages
 
 ### Dependencies for the next command:
-sudo apt-get install curl
+sudo apt install curl
 
 ### Can be executed with the line below:
 curl https://raw.githubusercontent.com/jcesarprog/first-apt/master/first_apt-get.sh | sh
