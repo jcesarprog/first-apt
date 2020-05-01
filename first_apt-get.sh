@@ -24,7 +24,7 @@ progress_bar() {
     (
         echo "$progress"
         echo -e "# $1."
-        notify-send "$1 - Progress: $progress%"
+        notify-send "$1" "Progress: $progress%"
         sleep 3
         # =================================================================
         # Command for task with supressed output goes here.
@@ -108,7 +108,6 @@ user=$(who | awk '{print $1}')
 user_home="/home/$user"
 name=$(lsb_release -sc)
 u_18_name="bionic"
-
 
 echo -e $bold"\nThis distribution codename is $name\nUser: $user"$end
 sleep 2
