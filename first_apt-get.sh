@@ -381,5 +381,5 @@ echo $bold"# YOU SHOULD REBOOT YOUR SYSTEM NOW #"$end
 echo $bold"#####################################"$end
 
 echo -e $bold"\nIF ANY ERRORS OCCURRED, THEY WILL BE LOGGED IN FILE:"$end "~/errors.log"
-
+notify-send "first_apt-get.sh script completed"
 spd-say "COMPLETED"
