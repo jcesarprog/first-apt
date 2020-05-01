@@ -51,15 +51,15 @@ suc_fail_func() {
 }
 # ================================================
 # Step 1
-echo $bold"Making a backup from original apt sources"$end
+echo -e $bold"Making a backup from original apt sources"$end
 sleep 2
 cat /etc/apt/sources.list | sudo tee /etc/apt/sources.list.bak
 
-echo $bold"Redirecting to the main server sources in apt to avoid errors"$end
+echo -e $bold"Redirecting to the main server sources in apt to avoid errors"$end
 sleep 2
 sudo sed -i 's|http://\w\w[.]|http://|g' /etc/apt/sources.list
 
-echo $bold"Updating the repositories with the Main Server"$end
+echo -e $bold"Updating the repositories with the Main Server"$end
 sleep 2
 sudo apt-get clean
 sudo apt-get update
@@ -285,7 +285,7 @@ sleep 2
 umake electronics arduino
 suc_fail_func "Arduino IDE"
 
-echo $bold"Adding user to dialout group for Arduino"$end
+echo -e $bold"Adding user to dialout group for Arduino"$end
 sleep 2
 sudo usermod -a -G dialout $user
 
@@ -304,15 +304,15 @@ suc_fail_func "Dropbox"
 # Step 28
 progress_bar "Setting up vi theme.\nInstalling vimrc template."
 
-echo $bold"Installing vimrc template"$end
+echo -e $bold"Installing vimrc template"$end
 sleep 2
-echo $bold"Downloading vimrc template"$end
+echo -e $bold"Downloading vimrc template"$end
 wget -P $user_home/ $gitrepo/vimrc
 suc_fail_func "Downloading vimrc template"
 
 version=$(ls /usr/share/vim/ | grep -P "vim[0-9]{2}")
-echo $bold"vim-script version: $version"$end
-echo $bold"Installing vimrc"$end
+echo -e $bold"vim-script version: $version"$end
+echo -e $bold"Installing vimrc"$end
 sed -i -E "s/vim[0-9]{2}/$version/g" ~/vimrc
 mv ~/vimrc ~/.vimrc
 sudo cp $user_home/.vimrc /root/.vimrc
@@ -322,7 +322,7 @@ suc_fail_func "vimrc template"
 # Step 29
 progress_bar "Installing Python-3.7.7 from python.org"
 file="https://www.python.org/ftp/python/3.7.7/Python-3.7.7.tar.xz"
-echo $bold"Downloading Python-3.7.7 from python.org"$end
+echo -e $bold"Downloading Python-3.7.7 from python.org"$end
 wget -P $user_home/ $file
 suc_fail_func "Downloading Python-3.7.7 from python.org"
 # dir=$(echo $1 | sed 's|.tar.*||g')
@@ -354,7 +354,7 @@ progress_bar "Installing Docker."
 # sudo apt install docker-ce docker-ce-cli containerd.io
 sudo snap install docker
 suc_fail_func "Docker"
-echo $bold"Verifying docker instalation"$end
+echo -e $bold"Verifying docker instalation"$end
 sudo docker run hello-world
 suc_fail_func "Docker"
 
@@ -376,9 +376,9 @@ sudo apt-file update
 suc_fail_func "Apt-File"
 
 echo -e "\n\n"
-echo $bold"#####################################"$end
-echo $bold"# YOU SHOULD REBOOT YOUR SYSTEM NOW #"$end
-echo $bold"#####################################"$end
+echo -e $bold"#####################################"$end
+echo -e $bold"# YOU SHOULD REBOOT YOUR SYSTEM NOW #"$end
+echo -e $bold"#####################################"$end
 
 echo -e $bold"\nIF ANY ERRORS OCCURRED, THEY WILL BE LOGGED IN FILE:"$end "~/errors.log"
 notify-send "first_apt-get.sh script completed"
