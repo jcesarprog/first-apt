@@ -24,7 +24,7 @@ progress_bar() {
     (
         echo "$progress"
         echo -e "# $1."
-        notify-send "$1."
+        notify-send "$1 - Progress: $progress%"
         sleep 3
         # =================================================================
         # Command for task with supressed output goes here.
