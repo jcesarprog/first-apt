@@ -2,12 +2,14 @@
 ### Installs many useful packages
 
 ### Can be downloaded and executed with the line below:
-wget https://raw.githubusercontent.com/jcesarprog/first-apt/master/first_apt-get.sh && sh first_apt-get.sh
+wget https://raw.githubusercontent.com/jcesarprog/first-apt/master/first_apt-get.sh && bash first_apt-get.sh
 
 #### List of packages: 
 * zenity 
 * dialog 
 * libncurses5-dev 
+* dos2unix
+* docker
 * gcc 
 * g++ 
 * make

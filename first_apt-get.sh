@@ -2,7 +2,7 @@
 
 ROOTUID="0"
 if [ "$(id -u)" -eq "$ROOTUID" ]; then
-    echo "just call the script without sudo, it will ask your pass when needed"
+    echo -e "just call the script without sudo, it will ask your pass when needed"
     exit 1
 fi
 
@@ -23,7 +23,8 @@ progress_bar() {
     update_progress
     (
         echo "$progress"
-        echo "# $1."
+        echo -e "# $1."
+        notify-send "$1."
         sleep 3
         # =================================================================
         # Command for task with supressed output goes here.
@@ -43,9 +44,9 @@ progress_bar() {
 
 suc_fail_func() {
     if [ $? -eq 0 ]; then
-        echo $green"\nSuccess on installing $1\n"$end
+        echo -e $green"\nSuccess on installing $1\n"$end
     else
-        echo $red"Failure on installing $1"$end | tee -a ~/errors.log
+        echo -e $red"Failure on installing $1"$end | tee -a ~/errors.log
     fi
 }
 # ================================================
@@ -65,7 +66,7 @@ sudo apt-get update
 
 # ================================================
 # Step 2
-echo $bold"\nInstalling packages for the GUI\n"$end
+echo -e $bold"\nInstalling packages for the GUI\n"$end
 sleep 2
 sudo apt install zenity dialog libncurses5-dev -y
 suc_fail_func "GUI pacakages"
@@ -94,7 +95,7 @@ sudo apt-get update
 # ================================================
 # Step 5
 progress_bar "Installing many usefull packages."
-sudo apt install gcc g++ make gconf2 gconf-service rsync xterm htop vim vim-scripts emacs initramfs-tools binutils numlockx kernel-package pdfshuffler ubuntu-restricted-extras fonts-firacode libxml2-dev geany cups cups-pdf git apt-file gparted gnome-tweak-tool ffmpeg build-essential zlib1g-dev libbz2-dev liblzma-dev libreadline6-dev libsqlite3-dev libssl-dev libgdbm-dev liblzma-dev lzma lzma-dev libgdbm-dev libffi-dev uuid-dev libgdbm-dev libgdbm-compat-dev python2.7 python3-tk libnss3-dev libssl-dev libreadline-dev wget linux-headers-$(uname -r) tilix curl filezilla alacarte lsb-core gnome-shell-extensions snap snapd python3 python3-pip copyq guake firefox fish transmission nmap iptraf net-tools screen -y && sudo apt-get upgrade -y
+sudo apt install gcc g++ make gconf2 gconf-service dos2unix rsync xterm htop vim vim-scripts emacs initramfs-tools binutils numlockx kernel-package pdfshuffler ubuntu-restricted-extras fonts-firacode libxml2-dev geany cups cups-pdf git apt-file gparted gnome-tweak-tool ffmpeg build-essential zlib1g-dev libbz2-dev liblzma-dev libreadline6-dev libsqlite3-dev libssl-dev libgdbm-dev liblzma-dev lzma lzma-dev libgdbm-dev libffi-dev uuid-dev libgdbm-dev libgdbm-compat-dev python2.7 python3-tk libnss3-dev libssl-dev libreadline-dev wget linux-headers-$(uname -r) tilix curl filezilla alacarte lsb-core gnome-shell-extensions snap snapd python3 python3-pip copyq guake firefox fish transmission nmap iptraf net-tools screen -y && sudo apt-get upgrade -y
 suc_fail_func "many usefull pacakages"
 
 # ================================================
@@ -109,7 +110,7 @@ name=$(lsb_release -sc)
 u_18_name="bionic"
 
 
-echo $bold"\nThis distribution codename is $name\nUser: $user"$end
+echo -e $bold"\nThis distribution codename is $name\nUser: $user"$end
 sleep 2
 
 # ================================================
@@ -117,12 +118,12 @@ sleep 2
 progress_bar "Installing other utility packages."
 
 if [ "$name" != "$u_18_name" ]; then
-    echo $bold"\nInstalling python2 due to some dependencies\n"$end
+    echo -e $bold"\nInstalling python2 due to some dependencies\n"$end
     sudo apt install libpython2-stdlib python-is-python2 python2 python2-minimal tk8.6-dev -y
     if [ $? -eq 0 ]; then
-        echo $green"\nSuccess on installing python2\n"$end
+        echo -e $green"\nSuccess on installing python2\n"$end
     else
-        echo $red"Failure on installing python2"$end | tee -a ~/errors.log
+        echo -e $red"Failure on installing python2"$end | tee -a ~/errors.log
     fi
 
 else
@@ -134,36 +135,36 @@ fi
 # Step 8
 progress_bar "Setting up the system."
 
-echo $bold"\nRemoving the error for Tilix terminal for user and root\n"$end
+echo -e $bold"\nRemoving the error for Tilix terminal for user and root\n"$end
 sleep 2
 echo "\nif [ \$TILIX_ID ] || [ \$VTE_VERSION ]; then\n\tsource /etc/profile.d/vte*.sh\nfi" | tee -a ~/.bashrc
 echo "\nif [ \$TILIX_ID ] || [ \$VTE_VERSION ]; then\n\tsource /etc/profile.d/vte*.sh\nfi" | sudo tee -a /root/.bashrc
 
-echo $bold"\nEnabling bash autocompletion for user and root\n"$end
+echo -e $bold"\nEnabling bash autocompletion for user and root\n"$end
 sleep 2
 echo "\n. /etc/bash_completion" | tee -a ~/.bashrc
 echo "\n. /etc/bash_completion" | sudo tee -a /root/.bashrc
 
-echo $bold"\nEnabling Color prompt on terminal for user and root\n"$end
+echo -e $bold"\nEnabling Color prompt on terminal for user and root\n"$end
 sleep 2
 sed -i "s/#force_color_prompt/force_color_prompt/g" ~/.bashrc
 sed -i "s/#export GCC_COLORS/export GCC_COLORS/g" ~/.bashrc
 sudo sed -i "s/#force_color_prompt/force_color_prompt/g" /root/.bashrc
 sudo sed -i "s/#export GCC_COLORS/export GCC_COLORS/g" /root/.bashrc
 
-echo $bold"\nPutting python on user path to avoid warnings\n"$end
+echo -e $bold"\nPutting python on user path to avoid warnings\n"$end
 sleep 2
 echo "\nexport PATH=/home/$user/.local/bin:\$PATH" >>~/.bashrc
 
-echo $bold"\nEnabling numlock on lightdm start\n"$end
+echo -e $bold"\nEnabling numlock on lightdm start\n"$end
 sleep 2
 echo "greeter-setup-script=/usr/bin/numlockx on" | sudo tee -a /usr/share/lightdm/lightdm.conf.d/50-unity-greeter.conf
 
-echo $bold"\nChoose the default editor for the system\n"$end
+echo -e $bold"\nChoose the default editor for the system\n"$end
 sleep 3
 sudo update-alternatives --config editor
 
-echo $bold"\nChoose the default terminal emulator for the system\n"$end
+echo -e $bold"\nChoose the default terminal emulator for the system\n"$end
 sleep 3
 sudo update-alternatives --config x-terminal-emulator
 
@@ -176,7 +177,7 @@ suc_fail_func "packages for audio, video, drawing, streaming, math and virtualbo
 # ================================================
 # Step 10
 progress_bar "Adding VsCode to sources."
-echo "#VsCode\ndeb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main" | sudo tee /etc/apt/sources.list.d/vscode.list
+echo -e "#VsCode\ndeb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main" | sudo tee /etc/apt/sources.list.d/vscode.list
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor >microsoft.gpg
 sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
 
@@ -279,7 +280,7 @@ suc_fail_func "Ubuntu-Make"
 # ================================================
 # Step 26
 progress_bar "Installing Arduino IDE."
-echo $bold"\nAdvisable to leave the default path given\n"$end
+echo -e $bold"\nAdvisable to leave the default path given\n"$end
 sleep 2
 umake electronics arduino
 suc_fail_func "Arduino IDE"
@@ -339,33 +340,46 @@ progress_bar "Setting up system variables for Python-3.7.7"
 PYTHON_HOME=$(pwd)
 echo "" | sudo tee -a /etc/profile
 echo "PYTHON_HOME=$PYTHON_HOME" | sudo tee -a /etc/profile
-echo "PATH=\$PYTHON_HOME:\$PATH" | sudo tee -a /etc/profile
+echo -e "PATH=\$PYTHON_HOME:\$PATH" | sudo tee -a /etc/profile
 echo "export PYTHON_HOME PATH" | sudo tee -a /etc/profile
 sudo ln -s /home/$user/Python-3.7.7/python /usr/bin/python3.7
 suc_fail_func "Python3.7.7 variables"
 
 # ================================================
 # Step 31
+progress_bar "Installing Docker."
+# curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+# sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+# sudo apt-get update
+# sudo apt install docker-ce docker-ce-cli containerd.io
+sudo snap install docker
+suc_fail_func "Docker"
+echo $bold"Verifying docker instalation"$end
+sudo docker run hello-world
+suc_fail_func "Docker"
+
+# ================================================
+# Step 32
 progress_bar "Installing mlocate."
 sudo apt install mlocate
 suc_fail_func "mlocate"
 
 # ================================================
-# Step 32
+# Step 33
 progress_bar "Cleaning apt cache files."
 sudo apt-get clean
 
 # ================================================
-# Step 33
+# Step 34
 progress_bar "Updating Apt-File database."
 sudo apt-file update
 suc_fail_func "Apt-File"
 
-echo "\n\n"
+echo -e "\n\n"
 echo $bold"#####################################"$end
 echo $bold"# YOU SHOULD REBOOT YOUR SYSTEM NOW #"$end
 echo $bold"#####################################"$end
 
-echo $bold"\nIF ANY ERRORS OCCURRED, THEY WILL BE LOGGED IN FILE:"$end "~/errors.log"
+echo -e $bold"\nIF ANY ERRORS OCCURRED, THEY WILL BE LOGGED IN FILE:"$end "~/errors.log"
 
 spd-say "COMPLETED"
