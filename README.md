@@ -74,7 +74,7 @@ wget https://raw.githubusercontent.com/jcesarprog/first-apt/master/first_apt-get
 * virtualbox 
 * Google Chrome 
 * chrome-gnome-shell 
-* code 
+* VSCode 
 * sublime-text 
 * anydesk 
 * grub-customizer 
