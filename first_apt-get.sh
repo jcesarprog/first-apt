@@ -374,7 +374,7 @@ progress_bar "Updating Apt-File database."
 sudo apt-file update
 suc_fail_func "Apt-File"
 
-echo -e "\a\n\n"
+echo -e "\n\n"
 echo -e $bold"#####################################"$end
 echo -e $bold"# YOU SHOULD REBOOT YOUR SYSTEM NOW #"$end
 echo -e $bold"#####################################"$end
@@ -382,3 +382,5 @@ echo -e $bold"#####################################"$end
 echo -e $bold"\nIF ANY ERRORS OCCURRED, THEY WILL BE LOGGED IN FILE:"$end "~/errors.log"
 notify-send "first_apt-get.sh script completed"
 spd-say "COMPLETED"
+# Beep at the end
+echo -e "\a"; sleep 0.5; echo -e "\a";
