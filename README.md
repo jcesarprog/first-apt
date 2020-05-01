@@ -10,6 +10,7 @@ wget https://raw.githubusercontent.com/jcesarprog/first-apt/master/first_apt-get
 * libncurses5-dev 
 * gcc 
 * g++ 
+* make
 * gconf2 
 * rsync 
 * xterm 
