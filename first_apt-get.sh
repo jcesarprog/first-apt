@@ -94,7 +94,7 @@ sudo apt-get update
 # ================================================
 # Step 5
 progress_bar "Installing many usefull packages."
-sudo apt install gcc g++ gconf2 gconf-service rsync xterm htop vim vim-scripts emacs initramfs-tools binutils numlockx kernel-package pdfshuffler ubuntu-restricted-extras fonts-firacode libxml2-dev geany cups cups-pdf git apt-file gparted gnome-tweak-tool ffmpeg build-essential zlib1g-dev libbz2-dev liblzma-dev libncurses5-dev libreadline6-dev libsqlite3-dev libssl-dev libgdbm-dev liblzma-dev lzma lzma-dev libgdbm-dev libffi-dev uuid-dev libgdbm-dev libgdbm-compat-dev python2.7 python3-tk libnss3-dev libssl-dev libreadline-dev wget linux-headers-$(uname -r) tilix curl filezilla alacarte lsb-core gnome-shell-extensions snap snapd python3 python3-pip copyq guake firefox fish transmission nmap iptraf net-tools screen -y && sudo apt-get upgrade -y
+sudo apt install gcc g++ make gconf2 gconf-service rsync xterm htop vim vim-scripts emacs initramfs-tools binutils numlockx kernel-package pdfshuffler ubuntu-restricted-extras fonts-firacode libxml2-dev geany cups cups-pdf git apt-file gparted gnome-tweak-tool ffmpeg build-essential zlib1g-dev libbz2-dev liblzma-dev libreadline6-dev libsqlite3-dev libssl-dev libgdbm-dev liblzma-dev lzma lzma-dev libgdbm-dev libffi-dev uuid-dev libgdbm-dev libgdbm-compat-dev python2.7 python3-tk libnss3-dev libssl-dev libreadline-dev wget linux-headers-$(uname -r) tilix curl filezilla alacarte lsb-core gnome-shell-extensions snap snapd python3 python3-pip copyq guake firefox fish transmission nmap iptraf net-tools screen -y && sudo apt-get upgrade -y
 suc_fail_func "many usefull pacakages"
 
 # ================================================
@@ -194,7 +194,7 @@ echo "deb http://deb.anydesk.com/ all main" | sudo tee /etc/apt/sources.list.d/a
 
 # ================================================
 # Step 13
-progress_bar "Adding AnyDesk to sources."
+progress_bar "Adding Insync to sources."
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ACCAF35C
 echo "deb http://apt.insync.io/ubuntu $name non-free contrib" | sudo tee -a /etc/apt/sources.list.d/insync.list
 
@@ -259,8 +259,6 @@ suc_fail_func "Git-Kraken"
 # ================================================
 # Step 23
 progress_bar "Installing TimeShift for Restoring Points Backups."
-sudo add-apt-repository -y ppa:teejee2008/timeshift
-sudo apt-get update
 sudo apt install timeshift -y
 suc_fail_func "TimeShift"
 
