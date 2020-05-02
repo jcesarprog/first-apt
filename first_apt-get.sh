@@ -132,7 +132,7 @@ if [ "$name" != "$u_18_name" ]; then
     sudo apt install libpython2-stdlib python-is-python2 python2 python2-minimal tk8.6-dev grub-customizer -y
     suc_fail_func "Python2"
 else
-    sudo apt install tk8.5-dev 
+    sudo apt install tk8.5-dev -y
 fi
 
 # ================================================
