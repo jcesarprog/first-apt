@@ -3,7 +3,9 @@
 ### Installs many useful packages
 
 ### Can be downloaded and executed with the line below:
+```shellscript
 wget https://raw.githubusercontent.com/jcesarprog/first-apt/master/first_apt-get.sh && bash first_apt-get.sh
+```
 
 #### List of packages: 
 * zenity 
