@@ -375,7 +375,8 @@ suc_fail_func "mlocate"
 
 # ================================================
 # Step 33
-progress_bar "Cleaning apt cache files."
+progress_bar "Cleaning apt files."
+sudo apt-get autoremove
 sudo apt-get clean
 
 # ================================================
