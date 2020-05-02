@@ -118,10 +118,10 @@ progress_bar "Installing other utility packages."
 
 if [ "$name" != "$u_18_name" ]; then
     echo -e $bold"\nInstalling python2 due to some dependencies\n"$end
-    sudo apt install libpython2-stdlib python-is-python2 python2 python2-minimal tk8.6-dev -y
+    sudo apt install libpython2-stdlib python-is-python2 python2 python2-minimal tk8.6-dev grub-customizer -y
     suc_fail_func "Python2"
 else
-    sudo apt install tk8.5-dev
+    sudo apt install tk8.5-dev 
 fi
 
 # ================================================
@@ -201,10 +201,10 @@ suc_fail_func "Google Chrome"
 
 # ================================================
 # Step 15
-progress_bar "Installing chrome-gnome-shell, code, sublime-text, anydesk, grub-customizer, insync."
+progress_bar "Installing chrome-gnome-shell, code, sublime-text, anydesk, insync."
 sudo apt-get update
-sudo apt install chrome-gnome-shell code sublime-text anydesk grub-customizer insync libcanberra-gtk-module -y
-suc_fail_func "chrome-gnome-shell, code, sublime-text, anydesk, grub-customizer, insync"
+sudo apt install chrome-gnome-shell code sublime-text anydesk insync libcanberra-gtk-module -y
+suc_fail_func "chrome-gnome-shell, code, sublime-text, anydesk, insync"
 
 # ================================================
 # Step 16
