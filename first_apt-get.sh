@@ -130,13 +130,13 @@ progress_bar "Setting up the system."
 
 echo -e $bold"\nRemoving the error for Tilix terminal for user and root\n"$end
 sleep 2
-echo "\nif [ \$TILIX_ID ] || [ \$VTE_VERSION ]; then\n\tsource /etc/profile.d/vte*.sh\nfi" | tee -a ~/.bashrc
-echo "\nif [ \$TILIX_ID ] || [ \$VTE_VERSION ]; then\n\tsource /etc/profile.d/vte*.sh\nfi" | sudo tee -a /root/.bashrc
+echo -e "\nif [ \$TILIX_ID ] || [ \$VTE_VERSION ]; then\n\tsource /etc/profile.d/vte*.sh\nfi" | tee -a ~/.bashrc
+echo -e "\nif [ \$TILIX_ID ] || [ \$VTE_VERSION ]; then\n\tsource /etc/profile.d/vte*.sh\nfi" | sudo tee -a /root/.bashrc
 
 echo -e $bold"\nEnabling bash autocompletion for user and root\n"$end
 sleep 2
-echo "\n. /etc/bash_completion" | tee -a ~/.bashrc
-echo "\n. /etc/bash_completion" | sudo tee -a /root/.bashrc
+echo -e "\n. /etc/bash_completion" | tee -a ~/.bashrc
+echo -e "\n. /etc/bash_completion" | sudo tee -a /root/.bashrc
 
 echo -e $bold"\nEnabling Color prompt on terminal for user and root\n"$end
 sleep 2
@@ -147,7 +147,7 @@ sudo sed -i "s/#export GCC_COLORS/export GCC_COLORS/g" /root/.bashrc
 
 echo -e $bold"\nPutting python on user path to avoid warnings\n"$end
 sleep 2
-echo "\nexport PATH=/home/$user/.local/bin:\$PATH" >>~/.bashrc
+echo -e "\nexport PATH=/home/$user/.local/bin:\$PATH" >>~/.bashrc
 
 echo -e $bold"\nEnabling numlock on lightdm start\n"$end
 sleep 2
@@ -332,7 +332,7 @@ suc_fail_func "Python3.7.7"
 progress_bar "Setting up system variables for Python-3.7.7"
 PYTHON_HOME=$(pwd)
 echo "" | sudo tee -a /etc/profile
-echo "PYTHON_HOME=$PYTHON_HOME" | sudo tee -a /etc/profile
+echo -e "PYTHON_HOME=$PYTHON_HOME" | sudo tee -a /etc/profile
 echo -e "PATH=\$PYTHON_HOME:\$PATH" | sudo tee -a /etc/profile
 echo "export PYTHON_HOME PATH" | sudo tee -a /etc/profile
 sudo ln -s /home/$user/Python-3.7.7/python /usr/bin/python3.7
