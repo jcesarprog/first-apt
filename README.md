@@ -1,4 +1,5 @@
 ## This repo contains a script to automate the first apt-get on a new system (Ubuntu).
+### Tested on Ubuntu 18 and 20 versions
 ### Installs many useful packages
 
 ### Can be downloaded and executed with the line below:
@@ -55,7 +56,8 @@ wget https://raw.githubusercontent.com/jcesarprog/first-apt/master/first_apt-get
 * copyq 
 * guake 
 * firefox 
-* fish 
+* fish
+* zsh 
 * transmission 
 * nmap 
 * iptraf 
