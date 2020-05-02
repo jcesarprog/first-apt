@@ -118,18 +118,8 @@ progress_bar "Installing other utility packages."
 
 if [ "$name" != "$u_18_name" ]; then
     echo -e $bold"\nInstalling python2 due to some dependencies\n"$end
-<<<<<<< HEAD
     sudo apt install libpython2-stdlib python-is-python2 python2 python2-minimal tk8.6-dev -y
     suc_fail_func "Python2"
-=======
-    sudo apt install libpython2-stdlib python-is-python2 python2 python2-minimal tk8.6-dev grub-customizer -y
-    if [ $? -eq 0 ]; then
-        echo -e $green"\nSuccess on installing python2\n"$end
-    else
-        echo -e $red"Failure on installing python2"$end | tee -a ~/errors.log
-    fi
-
->>>>>>> a9cf4d5a0411e79a0c243aafbef642ad8af80c2f
 else
     sudo apt install tk8.5-dev
 fi
@@ -211,10 +201,10 @@ suc_fail_func "Google Chrome"
 
 # ================================================
 # Step 15
-progress_bar "Installing chrome-gnome-shell, code, sublime-text, anydesk, insync."
+progress_bar "Installing chrome-gnome-shell, code, sublime-text, anydesk, grub-customizer, insync."
 sudo apt-get update
-sudo apt install chrome-gnome-shell code sublime-text anydesk insync libcanberra-gtk-module -y
-suc_fail_func "chrome-gnome-shell, code, sublime-text, anydesk, insync"
+sudo apt install chrome-gnome-shell code sublime-text anydesk grub-customizer insync libcanberra-gtk-module -y
+suc_fail_func "chrome-gnome-shell, code, sublime-text, anydesk, grub-customizer, insync"
 
 # ================================================
 # Step 16
@@ -393,10 +383,6 @@ echo -e $bold"\nIF ANY ERRORS OCCURRED, THEY WILL BE LOGGED IN FILE:"$end "~/err
 notify-send "first_apt-get.sh script completed"
 spd-say "COMPLETED"
 # Beep at the end
-<<<<<<< HEAD
 echo -e "\a"
 sleep 0.5
 echo -e "\a"
-=======
-echo -e "\a"; sleep 0.5; echo -e "\a";
->>>>>>> a9cf4d5a0411e79a0c243aafbef642ad8af80c2f
