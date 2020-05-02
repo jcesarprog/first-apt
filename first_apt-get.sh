@@ -119,15 +119,9 @@ progress_bar "Installing other utility packages."
 if [ "$name" != "$u_18_name" ]; then
     echo -e $bold"\nInstalling python2 due to some dependencies\n"$end
     sudo apt install libpython2-stdlib python-is-python2 python2 python2-minimal tk8.6-dev -y
-    if [ $? -eq 0 ]; then
-        echo -e $green"\nSuccess on installing python2\n"$end
-    else
-        echo -e $red"Failure on installing python2"$end | tee -a ~/errors.log
-    fi
-
+    suc_fail_func "Python2"
 else
     sudo apt install tk8.5-dev
-
 fi
 
 # ================================================
@@ -347,12 +341,18 @@ suc_fail_func "Python3.7.7 variables"
 # ================================================
 # Step 31
 progress_bar "Installing Docker."
-# curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-# sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-# sudo apt-get update
-# sudo apt install docker-ce docker-ce-cli containerd.io
-sudo snap install docker
-suc_fail_func "Docker"
+
+if [ "$name" != "$u_18_name" ]; then
+    sudo snap install docker
+    suc_fail_func "Docker"
+else
+    sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+    sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+    sudo apt-get update
+    sudo apt install docker-ce docker-ce-cli containerd.io -y
+    suc_fail_func "Docker"
+fi
+
 echo -e $bold"Verifying docker instalation"$end
 sudo docker run hello-world
 suc_fail_func "Docker"
@@ -383,4 +383,6 @@ echo -e $bold"\nIF ANY ERRORS OCCURRED, THEY WILL BE LOGGED IN FILE:"$end "~/err
 notify-send "first_apt-get.sh script completed"
 spd-say "COMPLETED"
 # Beep at the end
-echo -e "\a"; sleep 0.5; echo -e "\a";
+echo -e "\a"
+sleep 0.5
+echo -e "\a"
