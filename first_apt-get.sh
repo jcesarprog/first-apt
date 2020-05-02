@@ -362,7 +362,7 @@ else
     sudo apt install docker-ce docker-ce-cli containerd.io -y
     suc_fail_func "Docker"
 fi
-
+sleep 5
 echo -e $bold"Verifying docker instalation"$end
 sudo docker run hello-world
 suc_fail_func "Docker"
