@@ -47,7 +47,7 @@ suc_fail_func() {
         echo -e $green"\nSuccess on installing $1\n"$end
     else
         echo -e $red"Failure on installing $1"$end 
-        echo "Failure on installing $1" >> tee -a ~/errors.log
+        echo -e "Failure on installing $1" >>  ~/errors.log
     fi
 }
 # ================================================
