@@ -97,13 +97,13 @@ sudo apt-get update
 progress_bar "Installing many usefull packages."
 sudo apt install gcc g++ make gconf2 gconf-service dos2unix rsync xterm htop vim vim-scripts emacs initramfs-tools \
 binutils numlockx kernel-package pdfshuffler ubuntu-restricted-extras fonts-firacode libxml2-dev geany cups cups-pdf \
-git apt-file gparted gnome-tweak-tool ffmpeg build-essential zlib1g-dev libbz2-dev liblzma-dev libreadline6-dev \ 
+git apt-file gparted gnome-tweak-tool ffmpeg build-essential zlib1g-dev libbz2-dev liblzma-dev libreadline6-dev \
 libsqlite3-dev libssl-dev libgdbm-dev liblzma-dev lzma lzma-dev libgdbm-dev libffi-dev uuid-dev libgdbm-dev \
 libgdbm-compat-dev python2.7 python3-tk libnss3-dev libssl-dev libreadline-dev wget linux-headers-$(uname -r) tilix \
 curl filezilla alacarte lsb-core gnome-shell-extensions snap snapd python3 python3-pip copyq guake firefox fish \
 transmission nmap iptraf net-tools screen blt-dev diffstat docutils-common libbluetooth-dev libdb-dev libdb5.3-dev \
-libjs-sphinxdoc libjs-underscore libmpdec-dev python-babel-localedata python3-alabaster python3-babel python3-docutils \ 
-python3-imagesize python3-jinja2 python3-packaging python3-pygments python3-pyparsing python3-roman python3-sphinx quilt \ 
+libjs-sphinxdoc libjs-underscore libmpdec-dev python-babel-localedata python3-alabaster python3-babel python3-docutils \
+python3-imagesize python3-jinja2 python3-packaging python3-pygments python3-pyparsing python3-roman python3-sphinx quilt \
 sharutils sphinx-common tcl-dev tk-dev xvfb -y && sudo apt-get upgrade -y
 suc_fail_func "many usefull pacakages"
 
