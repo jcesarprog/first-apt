@@ -106,7 +106,7 @@ git apt-file gparted gnome-tweak-tool ffmpeg build-essential zlib1g-dev libbz2-d
 libsqlite3-dev libssl-dev libgdbm-dev liblzma-dev lzma lzma-dev libgdbm-dev libffi-dev uuid-dev libgdbm-dev \
 libgdbm-compat-dev python2.7 python3-tk libnss3-dev libssl-dev libreadline-dev wget linux-headers-$(uname -r) tilix \
 curl filezilla alacarte lsb-core gnome-shell-extensions snap snapd python3 python3-pip copyq guake firefox zsh fish \
-transmission nmap iptraf net-tools screen $python3_dep -y && sudo apt-get upgrade -y
+libcurl4-openssl-dev transmission nmap iptraf net-tools screen $python3_dep -y && sudo apt-get upgrade -y
 suc_fail_func "many usefull pacakages"
 
 # ================================================
