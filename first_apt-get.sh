@@ -351,6 +351,20 @@ suc_fail_func "Python3.7.7 variables"
 
 # ================================================
 # Step 31
+progress_bar "Installing NodeJS 14"
+# REMOVENDO O NODE ANTERIOR
+sudo apt purge --auto-remove nodejs -y
+sudo rm /etc/apt/sources.list.d/nodesource.list*
+
+# INSTALA O CURL
+sudo apt install curl -y
+
+# Baixa e instala o node 14
+curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# ================================================
+# Step 32
 progress_bar "Installing Docker."
 
 if [ "$name" != "$u_18_name" ]; then
@@ -369,19 +383,19 @@ sudo docker run hello-world
 suc_fail_func "Docker"
 
 # ================================================
-# Step 32
+# Step 33
 progress_bar "Installing mlocate."
 sudo apt install mlocate
 suc_fail_func "mlocate"
 
 # ================================================
-# Step 33
+# Step 34
 progress_bar "Cleaning apt files."
 sudo apt-get autoremove
 sudo apt-get clean
 
 # ================================================
-# Step 34
+# Step 35
 progress_bar "Updating Apt-File database."
 sudo apt-file update
 suc_fail_func "Apt-File"
