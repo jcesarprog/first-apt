@@ -118,8 +118,8 @@ gitrepo="https://raw.githubusercontent.com/jcesarprog/first-apt/master"
 user=$(who | awk '{print $1}')
 user_home="/home/$user"
 name=$(lsb_release -sc)
-#u_18_name="bionic"
-u_18_name=$(cat /etc/*release | grep "DISTRIB_CODENAME" |  cut -d= -f2)
+u_18_name="bionic"
+#u_18_name=$(cat /etc/*release | grep "DISTRIB_CODENAME" |  cut -d= -f2)
 
 
 echo -e $bold"\nThis distribution codename is $name\nUser: $user"$end
