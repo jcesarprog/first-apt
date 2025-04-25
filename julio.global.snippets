@@ -1,0 +1,1364 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"Block Comment": {
+		"prefix": "bc",
+		"scope": "javascript,typescript,javascriptreact,typescriptreact,go,c,cpp",
+		"body": [
+			"/*",
+			" * $1",
+			" */"
+		],
+	},
+	"ShellScript Bash Doc": {
+		"prefix": "shell-bash-doc",
+		"scope": "shellscript",
+		"body": [
+			"# Author: Julio Texeira <jcaballeroteixeira@pinterest.com>",
+			"# Date Created: $1",
+			"# Last Modified: $2",
+			"",
+			"# Description:",
+			"# $3",
+			"",
+			"# Usage:",
+			"# $4",
+		],
+		"description": "ShellScript Bash Doc"
+	},
+	"GO Struct": {
+		"prefix": "g-s",
+		"scope": "go",
+		"body": [
+			"type ${1:StructName} struct {",
+			"\t$2",
+			"}"
+		],
+		"description": "GO Struct"
+	},
+	"GO Method": {
+		"prefix": "g-m",
+		"scope": "go",
+		"body": [
+			"func (${1:StructRef}) ${2:MethodName}($3) $4 {",
+			"\t$5",
+			"}"
+		],
+		"description": "GO Method"
+	},
+	"GO Function": {
+		"prefix": [
+			"g-f",
+			"g-fu"
+		],
+		"scope": "go",
+		"body": [
+			"func ${1:FunctionName}($2) $3 {",
+			"\t$4",
+			"}"
+		],
+		"description": "GO Function"
+	},
+	"GO Interface": {
+		"prefix": "g-i",
+		"scope": "go",
+		"body": [
+			"type ${1:InterfaceName} interface {",
+			"\t$2",
+			"}"
+		],
+		"description": "GO Interface"
+	},
+	"GO Test": {
+		"prefix": "g-t",
+		"scope": "go",
+		"body": [
+			"func Test${1:FunctionName}(t *testing.T) {",
+			"\tgot := $2",
+			"\twant := $3",
+			"",
+			"\tif got != want {",
+			"\t\tt.Errorf(\"error -> want: %v, got: %v\", want, got)",
+			"\t}",
+			"}"
+		],
+		"description": "GO Test"
+	},
+	"GO Anonymous Function": {
+		"prefix": [
+			"g-af",
+			"g-fa"
+		],
+		"scope": "go",
+		"body": [
+			"func($1) $2 {",
+			"\t$3",
+			"}"
+		],
+		"description": "GO Anonymous Function"
+	},
+	"GO Anonymous Function Literal": {
+		"prefix": [
+			"g-fl",
+			"g-afl"
+		],
+		"scope": "go",
+		"body": [
+			"func() {",
+			"\t$1",
+			"}()"
+		],
+		"description": "GO Anonymous Function Literal"
+	},
+	"GO Goroutine Function Literal": {
+		"prefix": [
+			"g-gfl",
+			"g-gafl"
+		],
+		"scope": "go",
+		"body": [
+			"go func() {",
+			"\t$1",
+			"}()"
+		],
+		"description": "GO Goroutine Function Literal"
+	},
+	"Tailwind JS Config": {
+		"prefix": "tw-js-config",
+		"scope": "javascript",
+		"body": [
+			"content: [\"./src/**/*.{html, jsx, tsx}\"],",
+			"darkMode: \"class\","
+		],
+		"description": "Tailwind JS Config"
+	},
+	"Tailwind Compile Script": {
+		"prefix": "tw-script-compile",
+		"scope": "json",
+		"body": [
+			"\"tw:compile\": \"tailwindcss --watch -i ./src/styles/global.css -o ./src/styles/styles.css\""
+		],
+		"description": "Tailwind Compile Script"
+	},
+	"Lite-Server JSON Config": {
+		"prefix": "lt-json",
+		"scope": "json",
+		"body": [
+			"{",
+			"\t\"port\": 8000,",
+			"\t\"files\": [\"./src/**/*.{html,htm,css,js}\"],",
+			"\t\"server\": { \"baseDir\": \"./src\" }",
+			"}"
+		],
+		"description": "Lite-Server JSON Config"
+	},
+	"Prisma Import": {
+		"prefix": "prisma-i",
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"import { PrismaClient } from \"@prisma/client\";",
+			"",
+			"const prisma = new PrismaClient()",
+			""
+		],
+		"description": "Prisma Import"
+	},
+	"TypeProps": {
+		"prefix": [
+			"typ",
+			"rp"
+		],
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"",
+			"type ${1:${TM_FILENAME_BASE}}Props = {",
+			"\t$2",
+			"};",
+			""
+		],
+		"description": "TypeProps"
+	},
+	"Next Params Async": {
+		"prefix": [
+			"np"
+		],
+		"body": [
+			"params?: Promise<$1>;",
+		],
+		"description": "Next Params Async - Type definition for Next.js params with optional async"
+	},
+	"Next SeachParams Async": {
+		"prefix": [
+			"nsp"
+		],
+		"body": [
+			"searchParams?: Promise<$1>;",
+		],
+		"description": "Next SearchParams Async - Type definition for Next.js searchParams with optional async"
+	},
+	"Next RequestCTX Type": {
+		"prefix": [
+			"requestctx",
+			"reqctx",
+			"nrctx"
+		],
+		"body": [
+			"export type RequestCTX<ParamT = unknown, SearchParamsT = unknown> = {",
+			"  params?: Promise<ParamT>;",
+			"  searchParams?: Promise<SearchParamsT>;",
+			"};"
+		],
+		"description": "Next RequestCTX Type - Type definition for RequestCTX with optional params and searchParams"
+	},
+	"Next Async Type Params": {
+		"prefix": [
+			"ntyp",
+		],
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"",
+			"type ${1:${TM_FILENAME_BASE}}Props = {",
+			"\tparams: Promise<${2:propName}>,",
+			"};",
+			""
+		],
+		"description": "Next Async Type Params"
+	},
+	"Type": {
+		"prefix": "ty",
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"",
+			"type ${1:TypeName}T = {",
+			"\t$2",
+			"};",
+			""
+		],
+		"description": "Type"
+	},
+	"Export Type": {
+		"prefix": "tye",
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"",
+			"export type ${1:TypeName}T = {",
+			"\t$2",
+			"};",
+			""
+		],
+		"description": "Type"
+	},
+	"Interface": {
+		"prefix": "it",
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"",
+			"interface ${1:InterfaceName}I {",
+			"\t$2",
+			"};",
+			""
+		],
+		"description": "Interface"
+	},
+	"Export Interface": {
+		"prefix": "ite",
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"",
+			"export interface ${1:InterfaceName}I {",
+			"\t$2",
+			"};",
+			""
+		],
+		"description": "Export Interface"
+	},
+	"Arrow Function": {
+		"prefix": "af",
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"",
+			"const ${1:functionName} = ($2) => {",
+			"\t$3",
+			"};",
+			""
+		],
+		"description": "Arrow Function"
+	},
+	"Export Arrow Function": {
+		"prefix": "afe",
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"",
+			"export const ${1:functionName} = ($2) => {",
+			"\t$3",
+			"};",
+			""
+		],
+		"description": "Export Arrow Function"
+	},
+	"Export Arrow Function Middleware": {
+		"prefix": "afem",
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"",
+			"export const ${1:functionName} = (req: Request, res: Response, next: NextFunction) => {",
+			"\t$2",
+			"};",
+			""
+		],
+		"description": "Export Arrow Function Middleware"
+	},
+	"Async Arrow Function": {
+		"prefix": "afa",
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"",
+			"const ${1:functionName} = async ($2) => {",
+			"\t$3",
+			"};",
+			""
+		],
+		"description": "Async Arrow Function"
+	},
+	"Export Async Arrow Function": {
+		"prefix": "afae",
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"",
+			"export const ${1:functionName} = async ($2) => {",
+			"\t$3",
+			"};",
+			""
+		],
+		"description": "Export Async Arrow Function"
+	},
+	"React Arrow Component": {
+		"prefix": "rc",
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"",
+			"export const ${1:${TM_FILENAME_BASE}} = () => {",
+			"\treturn (",
+			"\t\t<div className=\"\">",
+			"\t\t\t<h1>${1:${TM_FILENAME_BASE}}</h1>",
+			"\t\t</div>",
+			"\t);",
+			"};",
+			""
+		],
+		"description": "React Arrow Component"
+	},
+	"React Arrow Component Default": {
+		"prefix": "rcd",
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"",
+			"const ${1:${TM_FILENAME_BASE}} = () => {",
+			"\treturn (",
+			"\t\t<div className=\"\">",
+			"\t\t\t<h1>${1:${TM_FILENAME_BASE}}</h1>",
+			"\t\t</div>",
+			"\t);",
+			"};",
+			"export default ${1:${TM_FILENAME_BASE}};",
+			""
+		],
+		"description": "React Arrow Component Default"
+	},
+	"Remix Route Component": {
+		"prefix": "rrc",
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"",
+			"const ${1:${TM_FILENAME_BASE}}Component = () => {",
+			"\treturn (",
+			"\t\t<div className=\"\">",
+			"\t\t\t<h1>${1:${TM_FILENAME_BASE}}Component</h1>",
+			"\t\t</div>",
+			"\t);",
+			"};",
+			"export default ${1:${TM_FILENAME_BASE}}Component;",
+			""
+		],
+		"description": "Next Page Component"
+	},
+	"Next Page Component": {
+		"prefix": "nrc",
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"",
+			"const ${1:${TM_FILENAME_BASE}}Page = () => {",
+			"\treturn (",
+			"\t\t<div className=\"\">",
+			"\t\t\t<h1>${1:${TM_FILENAME_BASE}}Page</h1>",
+			"\t\t</div>",
+			"\t);",
+			"};",
+			"export default ${1:${TM_FILENAME_BASE}}Page;",
+			""
+		],
+		"description": "Next Page Component"
+	},
+	"Async React Arrow Component": {
+		"prefix": "rca",
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"",
+			"export const ${1:${TM_FILENAME_BASE}} = async () => {",
+			"\treturn (",
+			"\t\t<div className=\"\">",
+			"\t\t\t<h1>${1:${TM_FILENAME_BASE}}</h1>",
+			"\t\t</div>",
+			"\t);",
+			"};",
+			""
+		],
+		"description": "Async React Arrow Component"
+	},
+	"Next Async Page Component": {
+		"prefix": "nrca",
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"",
+			"const ${1:${TM_FILENAME_BASE}}Page = async () => {",
+			"\treturn (",
+			"\t\t<div className=\"\">",
+			"\t\t\t<h1>${1:${TM_FILENAME_BASE}}Page</h1>",
+			"\t\t</div>",
+			"\t);",
+			"};",
+			"export default ${1:${TM_FILENAME_BASE}}Page;",
+			""
+		],
+		"description": "Next Async Page Function Component"
+	},
+	"React Arrow Component + Props Interface": {
+		"prefix": "rcp",
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"",
+			"type ${1:${TM_FILENAME_BASE}}Props = {",
+			"\t$2",
+			"}",
+			"",
+			"export const ${1:${TM_FILENAME_BASE}} = ({ $3 }: ${1:${TM_FILENAME_BASE}}Props) => {",
+			"\treturn (",
+			"\t\t<div className=\"\">",
+			"\t\t\t<h1>${1:${TM_FILENAME_BASE}}</h1>",
+			"\t\t</div>",
+			"\t);",
+			"};",
+			""
+		],
+		"description": "React Arrow Component + Props Interface"
+	},
+	"Next Page Component + Props Interface": {
+		"prefix": "nrcp",
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"",
+			"type ${1:${TM_FILENAME_BASE}}PageProps = {",
+			"\t$2",
+			"}",
+			"",
+			"const ${1:${TM_FILENAME_BASE}}Page = ({ $3 }: ${1:${TM_FILENAME_BASE}}PageProps) => {",
+			"\treturn (",
+			"\t\t<div className=\"\">",
+			"\t\t\t<h1>${1:${TM_FILENAME_BASE}}Page</h1>",
+			"\t\t</div>",
+			"\t);",
+			"};",
+			"export default ${1:${TM_FILENAME_BASE}}Page;",
+			""
+		],
+		"description": "Next Page Component + Props Interface"
+	},
+	"Async React Arrow Component + Props Interface": {
+		"prefix": "rcap",
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"",
+			"type ${1:${TM_FILENAME_BASE}}Props = {",
+			"\t$2",
+			"}",
+			"",
+			"export const ${1:${TM_FILENAME_BASE}} = async ({ $3 }: ${1:${TM_FILENAME_BASE}}Props) => {",
+			"\treturn (",
+			"\t\t<div className=\"\">",
+			"\t\t\t<h1>${1:${TM_FILENAME_BASE}}</h1>",
+			"\t\t</div>",
+			"\t);",
+			"};",
+			""
+		],
+		"description": "Async React Arrow Component + Props Interface"
+	},
+	"Next Async Page Component + Props Interface": {
+		"prefix": "nrcap",
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"",
+			"type ${1:${TM_FILENAME_BASE}}PageProps = {",
+			"\t$2",
+			"}",
+			"",
+			"const ${1:${TM_FILENAME_BASE}}Page = async ({ $3 }: ${1:${TM_FILENAME_BASE}}PageProps) => {",
+			"\treturn (",
+			"\t\t<div className=\"\">",
+			"\t\t\t<h1>${1:${TM_FILENAME_BASE}}Page</h1>",
+			"\t\t</div>",
+			"\t);",
+			"};",
+			"export default ${1:${TM_FILENAME_BASE}}Page;",
+			""
+		],
+		"description": "Next Async Page Function Component + Props Interface"
+	},
+	"Next useFormState Hook": {
+		"prefix": "ufh",
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"const [${1:name}State, ${1:name}Action] = useFormState(${2:serverAction}, ${3:initialState});",
+			""
+		],
+		"description": "Next useFormState Hook"
+	},
+	"reactStyledComponent": {
+		"prefix": "rasc",
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"import styled from 'styled-components'",
+			"",
+			"const Styled${TM_FILENAME_BASE} = styled.$0``",
+			"",
+			"function ${TM_FILENAME_BASE}() {",
+			"\treturn (",
+			"\t\t<Styled${TM_FILENAME_BASE}>",
+			"\t\t\t${TM_FILENAME_BASE}",
+			"\t\t</Styled${TM_FILENAME_BASE}>",
+			"\t)",
+			"}",
+			"",
+			"export default ${TM_FILENAME_BASE}",
+			""
+		],
+		"description": "React styled component"
+	},
+	"useState Hook": {
+		"prefix": "ush",
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"const [${1:state}, set${1/(.*)/${1:/capitalize}/}] = useState(${2:initialState})",
+			""
+		],
+		"description": "useState Hook"
+	},
+	"useEffect Hook": {
+		"prefix": "ueh",
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"useEffect(() => {",
+			"\t$1",
+			"\treturn () => {$2}",
+			"}, [$3])",
+			""
+		],
+		"description": "useEffect Hook"
+	},
+	"useReducer Hook": {
+		"prefix": "urh",
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"const [state, dispatch] = useReducer(${1:reducer}, ${2:initialState}, ${3:init})",
+			""
+		],
+		"description": "useReducer Hook"
+	},
+	"useMemo Hook": {
+		"prefix": "umh",
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"const ${1:memorizedValue} = useMemo(() => ${2:computeExpensiveValue(a, b)}, [${3:a, b}])",
+			""
+		],
+		"description": "useMemo Hook"
+	},
+	"useCallback Hook": {
+		"prefix": "uch",
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"const ${1:memorizedCallback} = useCallback(() => ${2:doSomething(a, b)}, [${3:a, b}])",
+			""
+		],
+		"description": "useCallback Hook"
+	},
+	"useTransition Hook": {
+		"prefix": "uth",
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"const [isPending, startTransition] = useTransition()",
+			"",
+			"startTransition(() => {$2})",
+			""
+		],
+		"description": "useTransition Hook"
+	},
+	"useDeferredValue Hook": {
+		"prefix": "udh",
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"const ${1:deferredValue} = useDeferredValue(${2:value})",
+			""
+		],
+		"description": "useDeferredValue Hook"
+	},
+	"Axios base fetch": {
+		"prefix": "af",
+		"body": [
+			"export const fetch${1:Sample} = async (out = false) => {",
+			"\ttry {",
+			"\t\tconst { data } = await axios.get(\"$2\");",
+			"\t\tif (out) console.log(data);",
+			"\t\treturn data;",
+			"\t} catch (err) {",
+			"\t\tconsole.log(err);",
+			"\t}",
+			"};",
+			"$3"
+		],
+		"description": "Axios base fetch"
+	},
+	"Jest + RTL Common imports": {
+		"prefix": "rtl-jest-imports",
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"import { render, screen } from \"@testing-library/react\";",
+			"import userEvent from \"@testing-library/user-event\";"
+		]
+	},
+	"Jest MSW imports": {
+		"prefix": "ji-msw",
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"import { setupServer } from \"msw/node\";",
+			"import { rest } from \"msw\";"
+		]
+	},
+	"Jest Describe Snippet": {
+		"prefix": "jd",
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"describe(\"${1:Test Group Name}\", () => {",
+			"\tit(\"${2:Test Name}\", () => {",
+			"\t\t$3",
+			"\t});",
+			"});"
+		]
+	},
+	"Jest Test Snippet": {
+		"prefix": [
+			"jt",
+			"jit",
+			"jtest"
+		],
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"it(\"${1:Test Name}\", () => {",
+			"\t$2",
+			"});"
+		]
+	},
+	"Jest Async Test Snippet": {
+		"prefix": [
+			"jta",
+			"jita",
+			"jtesta"
+		],
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"it(\"${1:Test Name}\", async () => {",
+			"\t$2",
+			"});"
+		]
+	},
+	"Jest Debug Snippet": {
+		"prefix": "jdbg",
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"// ! DEBUG",
+			"// eslint-disable-next-line testing-library/no-debugging-utils",
+			"screen.debug();"
+		]
+	},
+	"Jest Playground/debug Snippet": {
+		"prefix": [
+			"jplay",
+			"jdbgplay"
+		],
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"// ! DEBUG",
+			"// eslint-disable-next-line testing-library/no-debugging-utils",
+			"screen.debug();"
+		]
+	},
+	"Tailwind CSS Import": {
+		"prefix": "tw-import",
+		"scope": "css, sass, scss, postcss",
+		"body": [
+			"/* Base Tailwind CSS Import */",
+			"@tailwind base;",
+			"@tailwind components;",
+			"@tailwind utilities;",
+			""
+		],
+		"description": "Tailwind CSS Import"
+	},
+	"css reset + font-size": {
+		"prefix": "csr",
+		"scope": "css,html,javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"/* CSS Simple Reset */",
+			"* {",
+			"    margin: 0;",
+			"    padding: 0;",
+			"    box-sizing: border-box;",
+			"}",
+			":root {",
+			"    font-size: 62.5%; /* 16px => 10px */",
+			"}",
+			"img {",
+			"    max-width: 100%;",
+			"    height: auto;",
+			"    vertical-align: middle;",
+			"    /*display: block; */",
+			"    font-style: italic;",
+			"    background-repeat: no-repeat;",
+			"    background-size: cover;",
+			"    shape-margin: .75rem;",
+			"}",
+			""
+		],
+		"description": "Simple reset for CSS"
+	},
+	"css reset": {
+		"prefix": "csr",
+		"scope": "css,html,javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"/* CSS Simple Reset */",
+			"* {",
+			"    margin: 0;",
+			"    padding: 0;",
+			"    box-sizing: border-box;",
+			"}",
+			"/*",
+			":root {",
+			"    font-size: 62.5%;",
+			"}",
+			"*/",
+			"img {",
+			"    max-width: 100%;",
+			"    height: auto;",
+			"    vertical-align: middle;",
+			"    /*display: block; */",
+			"    font-style: italic;",
+			"    background-repeat: no-repeat;",
+			"    background-size: cover;",
+			"    shape-margin: .75rem;",
+			"}",
+			""
+		],
+		"description": "Simple reset for CSS"
+	},
+	"Print to console-Custom": {
+		"prefix": [
+			"clog"
+		],
+		"scope": "html,javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"console.log($1)$2",
+		],
+		"description": "Log output to console"
+	},
+	"Print to console table": {
+		"prefix": [
+			"tab",
+			"ctab"
+		],
+		"scope": "html,javascript,typescript,javascriptreact,typescriptreact",
+		"body": [
+			"console.table($1)$2",
+		],
+		"description": "Log output to console table"
+	},
+	"Try-Catch Block": {
+		"prefix": [
+			"tc",
+			"trycatch"
+		],
+		"body": [
+			"try {",
+			"\t$1",
+			"} catch (err) {",
+			"\tconsole.error(err);",
+			"}",
+			"$2"
+		],
+		"description": "try catch block"
+	},
+	"HMTL5 Custom Snippet": {
+		"prefix": "!",
+		"body": [
+			"<!DOCTYPE html>",
+			"<html lang=\"en\">",
+			"\t<head>",
+			"\t\t<meta charset=\"UTF-8\" />",
+			"\t\t<meta",
+			"\t\t\tname=\"viewport\"",
+			"\t\t\tcontent=\"width=device-width, initial-scale=1.0\"",
+			"\t\t/>",
+			"",
+			"\t\t<title>${1:Web Title}</title>",
+			"\t</head>",
+			"",
+			"\t<body>",
+			"\t\t${2:Content}",
+			"\t</body>",
+			"</html>",
+			""
+		],
+		"description": "HMTL5 Custom Snippet"
+	},
+	"Normalize.css - Uncommented": {
+		"prefix": "normcss",
+		"body": [
+			"/* Normalize.css v8.0.1 - Uncommented Version - START */",
+			"html {",
+			"\tline-height: 1.15;",
+			"\t-webkit-text-size-adjust: 100%;",
+			"}",
+			"body {",
+			"\tmargin: 0;",
+			"}",
+			"main {",
+			"\tdisplay: block;",
+			"}",
+			"h1 {",
+			"\tfont-size: 2em;",
+			"\tmargin: 0.67em 0;",
+			"}",
+			"hr {",
+			"\tbox-sizing: content-box;",
+			"\theight: 0;",
+			"\toverflow: visible;",
+			"}",
+			"pre {",
+			"\tfont-family: monospace, monospace;",
+			"\tfont-size: 1em;",
+			"}",
+			"a {",
+			"\tbackground-color: transparent;",
+			"}",
+			"abbr[title] {",
+			"\tborder-bottom: none;",
+			"\ttext-decoration: underline;",
+			"\ttext-decoration: underline dotted;",
+			"}",
+			"b,",
+			"strong {",
+			"\tfont-weight: bolder;",
+			"}",
+			"code,",
+			"kbd,",
+			"samp {",
+			"\tfont-family: monospace, monospace;",
+			"\tfont-size: 1em;",
+			"}",
+			"small {",
+			"\tfont-size: 80%;",
+			"}",
+			"sub,",
+			"sup {",
+			"\tfont-size: 75%;",
+			"\tline-height: 0;",
+			"\tposition: relative;",
+			"\tvertical-align: baseline;",
+			"}",
+			"sub {",
+			"\tbottom: -0.25em;",
+			"}",
+			"sup {",
+			"\ttop: -0.5em;",
+			"}",
+			"img {",
+			"\tborder-style: none;",
+			"}",
+			"button,",
+			"input,",
+			"optgroup,",
+			"select,",
+			"textarea {",
+			"\tfont-family: inherit;",
+			"\tfont-size: 100%;",
+			"\tline-height: 1.15;",
+			"\tmargin: 0;",
+			"}",
+			"button,",
+			"input {",
+			"\toverflow: visible;",
+			"}",
+			"button,",
+			"select {",
+			"\ttext-transform: none;",
+			"}",
+			"[type=\"button\"],",
+			"[type=\"reset\"],",
+			"[type=\"submit\"],",
+			"button {",
+			"\t-webkit-appearance: button;",
+			"\tappearance: button;",
+			"}",
+			"[type=\"button\"]::-moz-focus-inner,",
+			"[type=\"reset\"]::-moz-focus-inner,",
+			"[type=\"submit\"]::-moz-focus-inner,",
+			"button::-moz-focus-inner {",
+			"\tborder-style: none;",
+			"\tpadding: 0;",
+			"}",
+			"[type=\"button\"]:-moz-focusring,",
+			"[type=\"reset\"]:-moz-focusring,",
+			"[type=\"submit\"]:-moz-focusring,",
+			"button:-moz-focusring {",
+			"\toutline: 1px dotted ButtonText;",
+			"}",
+			"fieldset {",
+			"\tpadding: 0.35em 0.75em 0.625em;",
+			"}",
+			"legend {",
+			"\tbox-sizing: border-box;",
+			"\tcolor: inherit;",
+			"\tdisplay: table;",
+			"\tmax-width: 100%;",
+			"\tpadding: 0;",
+			"\twhite-space: normal;",
+			"}",
+			"progress {",
+			"\tvertical-align: baseline;",
+			"}",
+			"textarea {",
+			"\toverflow: auto;",
+			"}",
+			"[type=\"checkbox\"],",
+			"[type=\"radio\"] {",
+			"\tbox-sizing: border-box;",
+			"\tpadding: 0;",
+			"}",
+			"[type=\"number\"]::-webkit-inner-spin-button,",
+			"[type=\"number\"]::-webkit-outer-spin-button {",
+			"\theight: auto;",
+			"}",
+			"[type=\"search\"] {",
+			"\t-webkit-appearance: textfield;",
+			"\tappearance: textfield;",
+			"\toutline-offset: -2px;",
+			"}",
+			"[type=\"search\"]::-webkit-search-decoration {",
+			"\t-webkit-appearance: none;",
+			"}",
+			"::-webkit-file-upload-button {",
+			"\t-webkit-appearance: button;",
+			"\tfont: inherit;",
+			"}",
+			"details {",
+			"\tdisplay: block;",
+			"}",
+			"summary {",
+			"\tdisplay: list-item;",
+			"}",
+			"template {",
+			"\tdisplay: none;",
+			"}",
+			"[hidden] {",
+			"\tdisplay: none;",
+			"}",
+			"/* Normalize.css v8.0.1 - Uncommented Version - END */",
+			"",
+			""
+		],
+		"description": "Normalize.css - Uncommented"
+	},
+	"Normalize.css - Commented": {
+		"prefix": "normcss",
+		"body": [
+			"/* Normalize.css v8.0.1 - Commented version - START */",
+			"/* Document",
+			"   ========================================================================== */",
+			"",
+			"/**",
+			" * 1. Correct the line height in all browsers.",
+			" * 2. Prevent adjustments of font size after orientation changes in iOS.",
+			" */",
+			"",
+			"html {",
+			"\tline-height: 1.15; /* 1 */",
+			"\t-webkit-text-size-adjust: 100%; /* 2 */",
+			"}",
+			"",
+			"/* Sections",
+			"     ========================================================================== */",
+			"",
+			"/**",
+			"   * Remove the margin in all browsers.",
+			"   */",
+			"",
+			"body {",
+			"\tmargin: 0;",
+			"}",
+			"",
+			"/**",
+			"   * Render the `main` element consistently in IE.",
+			"   */",
+			"",
+			"main {",
+			"\tdisplay: block;",
+			"}",
+			"",
+			"/**",
+			"   * Correct the font size and margin on `h1` elements within `section` and",
+			"   * `article` contexts in Chrome, Firefox, and Safari.",
+			"   */",
+			"",
+			"h1 {",
+			"\tfont-size: 2em;",
+			"\tmargin: 0.67em 0;",
+			"}",
+			"",
+			"/* Grouping content",
+			"     ========================================================================== */",
+			"",
+			"/**",
+			"   * 1. Add the correct box sizing in Firefox.",
+			"   * 2. Show the overflow in Edge and IE.",
+			"   */",
+			"",
+			"hr {",
+			"\tbox-sizing: content-box; /* 1 */",
+			"\theight: 0; /* 1 */",
+			"\toverflow: visible; /* 2 */",
+			"}",
+			"",
+			"/**",
+			"   * 1. Correct the inheritance and scaling of font size in all browsers.",
+			"   * 2. Correct the odd `em` font sizing in all browsers.",
+			"   */",
+			"",
+			"pre {",
+			"\tfont-family: monospace, monospace; /* 1 */",
+			"\tfont-size: 1em; /* 2 */",
+			"}",
+			"",
+			"/* Text-level semantics",
+			"     ========================================================================== */",
+			"",
+			"/**",
+			"   * Remove the gray background on active links in IE 10.",
+			"   */",
+			"",
+			"a {",
+			"\tbackground-color: transparent;",
+			"}",
+			"",
+			"/**",
+			"   * 1. Remove the bottom border in Chrome 57-",
+			"   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.",
+			"   */",
+			"",
+			"abbr[title] {",
+			"\tborder-bottom: none; /* 1 */",
+			"\ttext-decoration: underline; /* 2 */",
+			"\ttext-decoration: underline dotted; /* 2 */",
+			"}",
+			"",
+			"/**",
+			"   * Add the correct font weight in Chrome, Edge, and Safari.",
+			"   */",
+			"",
+			"b,",
+			"strong {",
+			"\tfont-weight: bolder;",
+			"}",
+			"",
+			"/**",
+			"   * 1. Correct the inheritance and scaling of font size in all browsers.",
+			"   * 2. Correct the odd `em` font sizing in all browsers.",
+			"   */",
+			"",
+			"code,",
+			"kbd,",
+			"samp {",
+			"\tfont-family: monospace, monospace; /* 1 */",
+			"\tfont-size: 1em; /* 2 */",
+			"}",
+			"",
+			"/**",
+			"   * Add the correct font size in all browsers.",
+			"   */",
+			"",
+			"small {",
+			"\tfont-size: 80%;",
+			"}",
+			"",
+			"/**",
+			"   * Prevent `sub` and `sup` elements from affecting the line height in",
+			"   * all browsers.",
+			"   */",
+			"",
+			"sub,",
+			"sup {",
+			"\tfont-size: 75%;",
+			"\tline-height: 0;",
+			"\tposition: relative;",
+			"\tvertical-align: baseline;",
+			"}",
+			"",
+			"sub {",
+			"\tbottom: -0.25em;",
+			"}",
+			"",
+			"sup {",
+			"\ttop: -0.5em;",
+			"}",
+			"",
+			"/* Embedded content",
+			"     ========================================================================== */",
+			"",
+			"/**",
+			"   * Remove the border on images inside links in IE 10.",
+			"   */",
+			"",
+			"img {",
+			"\tborder-style: none;",
+			"}",
+			"",
+			"/* Forms",
+			"     ========================================================================== */",
+			"",
+			"/**",
+			"   * 1. Change the font styles in all browsers.",
+			"   * 2. Remove the margin in Firefox and Safari.",
+			"   */",
+			"",
+			"button,",
+			"input,",
+			"optgroup,",
+			"select,",
+			"textarea {",
+			"\tfont-family: inherit; /* 1 */",
+			"\tfont-size: 100%; /* 1 */",
+			"\tline-height: 1.15; /* 1 */",
+			"\tmargin: 0; /* 2 */",
+			"}",
+			"",
+			"/**",
+			"   * Show the overflow in IE.",
+			"   * 1. Show the overflow in Edge.",
+			"   */",
+			"",
+			"button,",
+			"input {",
+			"/* 1 */",
+			"\toverflow: visible;",
+			"}",
+			"",
+			"/**",
+			"   * Remove the inheritance of text transform in Edge, Firefox, and IE.",
+			"   * 1. Remove the inheritance of text transform in Firefox.",
+			"   */",
+			"",
+			"button,",
+			"select {",
+			"/* 1 */",
+			"\ttext-transform: none;",
+			"}",
+			"",
+			"/**",
+			"   * Correct the inability to style clickable types in iOS and Safari.",
+			"   */",
+			"",
+			"button,",
+			"[type=\"button\"],",
+			"[type=\"reset\"],",
+			"[type=\"submit\"] {",
+			"\t-webkit-appearance: button;",
+			"\tappearance: button;",
+			"}",
+			"",
+			"/**",
+			"   * Remove the inner border and padding in Firefox.",
+			"   */",
+			"",
+			"button::-moz-focus-inner,",
+			"[type=\"button\"]::-moz-focus-inner,",
+			"[type=\"reset\"]::-moz-focus-inner,",
+			"[type=\"submit\"]::-moz-focus-inner {",
+			"\tborder-style: none;",
+			"\tpadding: 0;",
+			"}",
+			"",
+			"/**",
+			"   * Restore the focus styles unset by the previous rule.",
+			"   */",
+			"",
+			"button:-moz-focusring,",
+			"[type=\"button\"]:-moz-focusring,",
+			"[type=\"reset\"]:-moz-focusring,",
+			"[type=\"submit\"]:-moz-focusring {",
+			"\toutline: 1px dotted ButtonText;",
+			"}",
+			"",
+			"/**",
+			"   * Correct the padding in Firefox.",
+			"   */",
+			"",
+			"fieldset {",
+			"\tpadding: 0.35em 0.75em 0.625em;",
+			"}",
+			"",
+			"/**",
+			"   * 1. Correct the text wrapping in Edge and IE.",
+			"   * 2. Correct the color inheritance from `fieldset` elements in IE.",
+			"   * 3. Remove the padding so developers are not caught out when they zero out",
+			"   *    `fieldset` elements in all browsers.",
+			"   */",
+			"",
+			"legend {",
+			"\tbox-sizing: border-box; /* 1 */",
+			"\tcolor: inherit; /* 2 */",
+			"\tdisplay: table; /* 1 */",
+			"\tmax-width: 100%; /* 1 */",
+			"\tpadding: 0; /* 3 */",
+			"\twhite-space: normal; /* 1 */",
+			"}",
+			"",
+			"/**",
+			"   * Add the correct vertical alignment in Chrome, Firefox, and Opera.",
+			"   */",
+			"",
+			"progress {",
+			"\tvertical-align: baseline;",
+			"}",
+			"",
+			"/**",
+			"   * Remove the default vertical scrollbar in IE 10+.",
+			"   */",
+			"",
+			"textarea {",
+			"\toverflow: auto;",
+			"}",
+			"",
+			"/**",
+			"   * 1. Add the correct box sizing in IE 10.",
+			"   * 2. Remove the padding in IE 10.",
+			"   */",
+			"",
+			"[type=\"checkbox\"],",
+			"[type=\"radio\"] {",
+			"box-sizing: border-box; /* 1 */",
+			"\tpadding: 0; /* 2 */",
+			"}",
+			"",
+			"/**",
+			"   * Correct the cursor style of increment and decrement buttons in Chrome.",
+			"   */",
+			"",
+			"[type=\"number\"]::-webkit-inner-spin-button,",
+			"[type=\"number\"]::-webkit-outer-spin-button {",
+			"\theight: auto;",
+			"}",
+			"",
+			"/**",
+			"   * 1. Correct the odd appearance in Chrome and Safari.",
+			"   * 2. Correct the outline style in Safari.",
+			"   */",
+			"",
+			"[type=\"search\"] {",
+			"\t-webkit-appearance: textfield; /* 1 */",
+			"\tappearance: textfield; /* 1 */",
+			"\toutline-offset: -2px; /* 2 */",
+			"}",
+			"",
+			"/**",
+			"   * Remove the inner padding in Chrome and Safari on macOS.",
+			"   */",
+			"",
+			"[type=\"search\"]::-webkit-search-decoration {",
+			"\t-webkit-appearance: none;",
+			"}",
+			"",
+			"/**",
+			"   * 1. Correct the inability to style clickable types in iOS and Safari.",
+			"   * 2. Change font properties to `inherit` in Safari.",
+			"   */",
+			"",
+			"::-webkit-file-upload-button {",
+			"\t-webkit-appearance: button; /* 1 */",
+			"\tfont: inherit; /* 2 */",
+			"}",
+			"",
+			"/* Interactive",
+			"     ========================================================================== */",
+			"",
+			"/*",
+			"   * Add the correct display in Edge, IE 10+, and Firefox.",
+			"   */",
+			"",
+			"details {",
+			"\tdisplay: block;",
+			"}",
+			"",
+			"/*",
+			"   * Add the correct display in all browsers.",
+			"   */",
+			"",
+			"summary {",
+			"\tdisplay: list-item;",
+			"}",
+			"",
+			"/* Misc",
+			"     ========================================================================== */",
+			"",
+			"/**",
+			"   * Add the correct display in IE 10+.",
+			"   */",
+			"",
+			"template {",
+			"\tdisplay: none;",
+			"}",
+			"",
+			"/**",
+			"   * Add the correct display in IE 10.",
+			"   */",
+			"",
+			"[hidden] {",
+			"\tdisplay: none;",
+			"}",
+			"/* Normalize.css v8.0.1 - Commented version - END */",
+			""
+		],
+		"description": "Normalize.css - Commented"
+	},
+}
