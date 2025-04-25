@@ -1,0 +1,408 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "explorer.compactFolders": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "headwind.runOnSave": true,
+    "window.zoomLevel": 0.8,
+    "editor.fontSize": 15,
+    "terminal.integrated.fontSize": 15,
+    "workbench.tree.indent": 18,
+    "window.title": "${activeEditorMedium}${separator}${rootName}",
+    "typescript.preferences.organizeImports": {
+      "always": true
+    },
+    "javascript.preferences.organizeImports": {
+      "always": true
+    },
+    "editor.lineHeight": 1.8,
+    "editor.lineNumbers": "on",
+    "files.autoSaveDelay": 10000,
+    "taskExplorer.enableSideBar": true,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.guides.bracketPairs": true,
+    "editor.guides.highlightActiveIndentation": "always",
+    "editor.autoClosingBrackets": "always",
+    "editor.renderWhitespace": "all",
+    "stylelint.config": {
+      "config": "./stylelint.config.js"
+    },
+    "vim.disableExtension": true,
+    "npm.packageManager": "auto",
+    "inline-parameters.enabled": true,
+    "inline-parameters.hideSingleParameters": false,
+    "inline-parameters.leadingCharacters": "(",
+    "inline-parameters.trailingCharacters": "):",
+    "inline-parameters.showVariadicNumbers": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit"
+      // "source.fixAll.stylelint": "always"
+    },
+    "relay.autoStartCompiler": false,
+    "editor.wordWrap": "on",
+    "editor.fontFamily": "FiraCode Nerd Font",
+    "editor.fontLigatures": true,
+    "explorer.confirmDelete": false,
+    "editor.tabCompletion": "onlySnippets",
+    "editor.suggest.showSnippets": true,
+    "editor.snippetSuggestions": "inline",
+    "editor.suggestSelection": "first",
+    "editor.minimap.autohide": true,
+    "editor.minimap.maxColumn": 50,
+    "editor.minimap.scale": 1,
+    "editor.minimap.size": "fill",
+    "chat.agent.enabled": true,
+    "typescript.suggest.autoImports": true,
+    "javascript.suggest.autoImports": true,
+    "path-intellisense.showHiddenFiles": true,
+    "path-intellisense.autoSlashAfterDirectory": true,
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "github.copilot.chat.agent.thinkingTool": true,
+    "github.copilot.chat.search.semanticTextResults": true,
+    "github.copilot.chat.codesearch.enabled": true,
+    "github.copilot.chat.edits.temporalContext.enabled": true,
+    "github.copilot.chat.editor.temporalContext.enabled": true,
+    "github.copilot.chat.edits.suggestRelatedFilesForTests": true,
+    "github.copilot.chat.edits.suggestRelatedFilesFromGitHistory": true,
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact"
+    ],
+    "workbench.editor.decorations.badges": true,
+    "workbench.editor.decorations.colors": true,
+    "importSorter.generalConfiguration.sortOnBeforeSave": true,
+    "files.watcherExclude": {
+      "**/.git/objects/**": true,
+      "**/.git/subtree-cache/**": true,
+      "**/node_modules/*/**": true,
+      "**/.hg/store/**": true,
+      "**/node_modules/**": true
+    },
+    "[javascriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[scss]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[prisma]": {
+      "editor.defaultFormatter": "Prisma.prisma",
+      "editor.formatOnSave": true
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.linkedEditing": true,
+    "[markdown]": {
+      "files.insertFinalNewline": false
+    },
+    "[mdx]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "emmet.syntaxProfiles": {
+      "html": {
+        "compactBooleanAttributes": true
+      }
+    },
+    "emmet.preferences": {
+      "profile.allowCompactBoolean": true
+    },
+    "emmet.includeLanguages": {
+      "astro": "html",
+      "javascript": "javascriptreact",
+      "typescript": "typescriptreact"
+    },
+    "[jsonc]": {
+      "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[snippets]": {
+      "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[json]": {
+      "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[css]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[astro]": {
+      "editor.defaultFormatter": "astro-build.astro-vscode"
+    },
+    "[sql]": {
+      "editor.defaultFormatter": "ReneSaarsoo.sql-formatter-vsc"
+    },
+    "editor.inlayHints.enabled": "on",
+    "diffEditor.wordWrap": "on",
+    "editor.guides.indentation": true,
+    "tailwind-fold.autoFold": false,
+    "headwind.prependCustomClasses": true,
+    "workbench.startupEditor": "none",
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyleInactive": "block",
+    "terminal.integrated.enableImages": true,
+    "terminal.integrated.smoothScrolling": true,
+    "terminal.integrated.stickyScroll.enabled": true,
+    "git.terminalGitEditor": true,
+    "remote.SSH.showLoginTerminal": true,
+    "code-runner.runInTerminal": true,
+    "reduxdev.port": 5173,
+    "git.openRepositoryInParentFolders": "always",
+    "rapidapi.terminalLink.enabled": false,
+    "githubPullRequests.terminalLinksHandler": "github",
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.executorMap": {
+      "javascript": "node",
+      "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+      "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+      "zig": "zig run",
+      "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+      "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+      "php": "php",
+      "python": "python -u",
+      "perl": "perl",
+      "perl6": "perl6",
+      "ruby": "ruby",
+      "go": "go run",
+      "lua": "lua",
+      "groovy": "groovy",
+      "powershell": "powershell -ExecutionPolicy ByPass -File",
+      "bat": "cmd /c",
+      "shellscript": "bash",
+      "fsharp": "fsi",
+      "csharp": "scriptcs",
+      "vbscript": "cscript //Nologo",
+      "typescript": "tsx",
+      "coffeescript": "coffee",
+      "scala": "scala",
+      "swift": "swift",
+      "julia": "julia",
+      "crystal": "crystal",
+      "ocaml": "ocaml",
+      "r": "Rscript",
+      "applescript": "osascript",
+      "clojure": "lein exec",
+      "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+      "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+      "racket": "racket",
+      "scheme": "csi -script",
+      "ahk": "autohotkey",
+      "autoit": "autoit3",
+      "dart": "dart",
+      "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+      "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+      "haskell": "runghc",
+      "nim": "nim compile --verbosity:0 --hints:off --run",
+      "lisp": "sbcl --script",
+      "kit": "kitc --run",
+      "v": "v run",
+      "sass": "sass --style expanded",
+      "scss": "scss --style expanded",
+      "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
+      "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+      "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+      "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+      "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+      "sml": "cd $dir && sml $fileName",
+      "mojo": "mojo run",
+      "erlang": "escript",
+      "spwn": "spwn build",
+      "pkl": "cd $dir && pkl eval -f yaml $fileName -o $fileNameWithoutExt.yaml",
+      "gleam": "gleam run -m $fileNameWithoutExt"
+    },
+    "sqltools.useNodeRuntime": true,
+    "rust-analyzer.check.command": "clippy",
+    "taskExplorer.exclude": [
+      "**/.vscode-test/**",
+      "**/Assets/**",
+      "**/bin/**",
+      "**/build/**",
+      "**/dist/**",
+      "**/doc/**",
+      "**/example/**",
+      "**/examples/**",
+      "**/ext/**",
+      "**/obj/**",
+      "**/out/**",
+      "**/output/**",
+      "**/packages/**",
+      "**/release/**",
+      "**/releases/**",
+      "**/samples/**",
+      "**/sdks/**",
+      "**/static/**",
+      "**/target/**",
+      "**/test/**",
+      "**/third_party/**",
+      "**/vendor/**",
+      "**/work/**",
+      "**/venv/**"
+    ],
+    "json.schemas": [],
+    "Devdb.colorTheme": "dark",
+    "notebook.consolidatedRunButton": true,
+    "notebook.diff.overviewRuler": true,
+    "notebook.formatOnSave.enabled": true,
+    "notebook.insertFinalNewline": true,
+    "notebook.lineNumbers": "on",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "chatgpt.lang": "en",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "vim.smartRelativeLine": true,
+    "explorer.fileNesting.patterns": {
+      "*.ts": "${capture}.js",
+      "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+      "*.jsx": "${capture}.js",
+      "*.tsx": "${capture}.ts",
+      "tsconfig.json": "tsconfig.*.json",
+      "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb",
+      "Cargo.toml": "Cargo.lock",
+      "*.sqlite": "${capture}.${extname}-*",
+      "*.db": "${capture}.${extname}-*",
+      "*.sqlite3": "${capture}.${extname}-*",
+      "*.db3": "${capture}.${extname}-*",
+      "*.sdb": "${capture}.${extname}-*",
+      "*.s3db": "${capture}.${extname}-*"
+    },
+    "css.lint.unknownAtRules": "ignore",
+    "javascript.validate.enable": false,
+    "inline-parameters.hideRedundantAnnotations": false,
+    "rest-client.environmentVariables": {
+      "$shared": {
+        "host": "http://localhost"
+      },
+      "local": {
+        "host": "http://localhost"
+      }
+    },
+    "[dockerfile]": {
+      "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "material-icon-theme.activeIconPack": "nest",
+    "material-icon-theme.folders.theme": "specific",
+    "material-icon-theme.files.associations": {
+      "**.entity.ts": "ngrx-entity",
+      "**.dto.ts": "key"
+    },
+    "material-icon-theme.folders.associations": {
+      "user": "ansible",
+      "users": "ansible",
+      "http": "generator",
+      "entities": "ngrx-entities",
+      "DTO": "keys",
+      "stripe": "sublime",
+      "infrastructure": "cluster",
+      "bruno": "generator",
+      "migrations": "tools",
+      "interceptors": "connection",
+      "components": "react-components"
+    },
+    "material-icon-theme.files.customClones": [
+      {
+        "name": "main-ts",
+        "base": "rocket",
+        "color": "green-500",
+        "fileNames": [
+          "src/main.ts"
+        ]
+      },
+      {
+        "name": "rust-mod",
+        "base": "rust",
+        "color": "blue-400",
+        "fileNames": [
+          "mod.rs"
+        ]
+      },
+      {
+        "name": "rust-lib",
+        "base": "rust",
+        "color": "light-green-300",
+        "lightColor": "light-green-600",
+        "fileNames": [
+          "lib.rs"
+        ]
+      }
+    ],
+    "editor.inlineSuggest.suppressSuggestions": true,
+    "terminal.external.osxExec": "Warp.app",
+    "remote.autoForwardPortsSource": "hybrid",
+    "diffEditor.maxComputationTime": 0,
+    "window.newWindowProfile": null,
+    "DockerRun.DisableDockerrc": true,
+    "zig.zls.enabled": "on",
+    // You can more more Zig and ZLS options here
+    // Whether to enable build-on-save diagnostics
+    //
+    // Further information about build-on save:
+    // https://zigtools.org/zls/guides/build-on-save/
+    // "zig.zls.enableBuildOnSave": true,
+    // All nested settings will only affect Zig files.
+    "[zig]": {
+      // Formatting with ZLS matches `zig fmt`.
+      // The Zig FAQ answers some questions about `zig fmt`:
+      // https://github.com/ziglang/zig/wiki/FAQ
+      //
+      // "editor.formatOnSave": false,
+      // "editor.inlayHints.enabled": "off",
+      // overwrite words when accepting completions
+      "editor.suggest.insertMode": "replace",
+      // The `foldingProviderModel` provides more accurate stick scroll scopes
+      "editor.stickyScroll.defaultModel": "foldingProviderModel",
+      "editor.codeActionsOnSave": {
+        // Run code actions that currently supports adding and removing discards.
+        "source.fixAll": "always",
+        // Run code actions that sorts @import declarations.
+        // Available since ZLS `0.14.0-dev.188+2be424de5`
+        "source.organizeImports": "always",
+      }
+    },
+    "editor.semanticTokenColorCustomizations": {
+      "rules": {
+        "*.deprecated": {
+          // highlight semantic tokens that are marked as "deprecated"
+          "strikethrough": true
+        }
+      }
+    },
+    "[go]": {
+      "editor.defaultFormatter": "golang.go",
+      // "editor.quickSuggestions": {
+      //   "other": "off",
+      //   "comments": "on",
+      //   "strings": "off"
+      // },
+      "github.copilot.editor.enableAutoCompletions": false
+    },
+    "go.lintTool": "staticcheck",
+    "codeium.enableConfig": {
+      "*": true,
+      "go": false
+    },
+    "go.toolsManagement.autoUpdate": true,
+    "sortCSS.sortOnSave": true,
+    "editor.formatOnSave": true,
+    "gitlens.advanced.messages": {
+      "suppressGkRequestFailed500Warning": true
+    },
+    "reactImportSorter.separateMultilineImports": true,
+    "code-runner.clearPreviousOutput": true,
+    "terminal.integrated.env.osx": {},
+    "console-ninja.featureSet": "Community",
+    "totalTypeScript.hideAllTips": false,
+    "totalTypeScript.hideBasicTips": true,
+    "totalTypeScript.hiddenTips": [
+      "passing-generics-to-types",
+      "omit-utility-type"
+    ],
+    "jest.runMode": "on-save",
+  }
